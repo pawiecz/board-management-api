@@ -1,0 +1,45 @@
+* [[https://lists.yoctoproject.org/pipermail/automated-testing/2019-October/000540.html][Board management API discussion at ATS]] (as of <2019-10-29 wto 12:00>)
+** Motivation
+- Reusing test job definitions
+** API style
+*** Command line shell script
+**** Pros
+- Easy to provide (if there is none yet)
+- Avoid recompilation
+- /Common/
+**** Cons
+- /Time sensitivity/
+** Board management layer detection
+*** /usr/lib/test/test.d
+- lava-board-control,
+- ttc-board-control,
+- labgrid-board-control,
+- beaker-board-control,
+- libvirt-board-control,
+- r4d-board-control,
+- etc.
+*** /etc/test.d
+- Communication (if not CLI)
+- Further configuration
+** Single set of APIs (for board management layer communication)
+*** list-boards
+- Introspection of the board layer managed objects
+*** list-features
+- Introspection of the board management layer supported features
+- Extensions: ``x-labgrid-set-gpio''
+*** reserve, release
+- Reserving a board
+- Many existing frameworks might expect to be the only client
+- How long the delay might be?
+*** reboot, power-on and power-off
+- Booting the board
+*** get-serial-device
+- Get serial port for the board
+*** More _complex_ verbs
+- run, copy_to, copy_from (executing commands, transferring files)
+- install-kernel, install-root-filesystem (provisioning)
+*** Synchronous vs asynchronous
+- Which are more common?
+- Which are more convenient?
+** Modularity
+*** Multiple schedulers
