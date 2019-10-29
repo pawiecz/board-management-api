@@ -52,6 +52,8 @@
 *** More _complex_ verbs
 - run, copy_to, copy_from (executing commands, transferring files)
 - install-kernel, install-root-filesystem (provisioning)
+- Should they even be supported on board management level?
+- Probably out-of-current-scope
 *** Synchronous vs asynchronous
 - Which are more common?
 - Which are more convenient?
