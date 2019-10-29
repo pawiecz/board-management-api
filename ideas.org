@@ -36,6 +36,7 @@
 ** Single set of APIs (for board management layer communication)
 *** list-boards
 - Introspection of the board layer managed objects
+- What about other board features?
 *** list-features
 - Introspection of the board management layer supported features
 - Extensions: ``x-labgrid-set-gpio''
