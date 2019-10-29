@@ -12,7 +12,11 @@
 
 * [[https://lists.yoctoproject.org/pipermail/automated-testing/2019-October/000540.html][Board management API discussion at ATS]] (as of <2019-10-29 wto 12:00>)
 ** Motivation
-- Reusing test job definitions
+- Using different testing stacks in the same physical lab with shared boards
+- Getting to know viewpoints on dividing CI and interactive use
+- Getting to know viewpoints on separate board management layers
+  - board reservation layer
+  - board control layer
 ** API style
 *** Command line shell script
 **** Pros
