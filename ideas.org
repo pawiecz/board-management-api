@@ -40,10 +40,11 @@
 *** list-features
 - Introspection of the board management layer supported features
 - Extensions: ``x-labgrid-set-gpio''
-*** reserve, release
+*** reserve, release (and renew)
 - Reserving a board
 - Many existing frameworks might expect to be the only client
-- How long the delay might be?
+- How long the delay might be (if any)? Use historical data?
+- Priorities required
 *** reboot, power-on and power-off
 - Booting the board
 *** get-serial-device
@@ -56,3 +57,5 @@
 - Which are more convenient?
 ** Modularity
 *** Multiple schedulers
+- Board manager (board reservations)
+- Job/task/test scheduler for actions
