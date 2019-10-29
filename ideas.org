@@ -17,6 +17,9 @@
 - Getting to know viewpoints on separate board management layers
   - board reservation layer
   - board control layer
+** Demotivation
+- Requires exposing access to the board for clients other than executor
+- Keeping boards at the /initial good state/ might be difficult
 ** API style
 *** Command line shell script
 **** Pros
@@ -24,6 +27,7 @@
 - Avoid recompilation
 - /Common/
 **** Cons
+- Testing framework internals might not need CLI
 - /Time sensitivity/
 ** Board management layer detection
 *** /usr/lib/test/test.d
@@ -41,6 +45,7 @@
 *** list-boards
 - Introspection of the board layer managed objects
 - What about other board features?
+- What about various naming conventions (LKFT, KernelCI)?
 *** list-features
 - Introspection of the board management layer supported features
 - Extensions: ``x-labgrid-set-gpio''
@@ -48,7 +53,7 @@
 - Reserving a board
 - Many existing frameworks might expect to be the only client
 - How long the delay might be (if any)? Use historical data?
-- Priorities required
+- Priorities required, what about interruptions?
 *** reboot, power-on and power-off
 - Software reboot
 - Hardware reset
