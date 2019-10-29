@@ -1,3 +1,15 @@
+#+TITLE: Defining a Standard Board Management API
+#+AUTHOR: Jan Lübbe, Pengutronix e.K. & Pawel Wieczorek, Samsung R&D Institute Poland
+#+DATE: October 31, 2019
+#+LANGUAGE: en
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [aspectratio=169,presentation]
+#+BEAMER_HEADER: \usetheme[sectionpage=none,numbering=fraction,block=fill]{metropolis}
+#+BEAMER_HEADER: \setbeamercolor{block title alerted}{fg=red}
+#+BEAMER_FONT_THEME: structurebold
+#+STARTUP: beamer
+#+OPTIONS: H:2 toc:nil
+
 * [[https://lists.yoctoproject.org/pipermail/automated-testing/2019-October/000540.html][Board management API discussion at ATS]] (as of <2019-10-29 wto 12:00>)
 ** Motivation
 - Reusing test job definitions
