@@ -50,7 +50,9 @@
 - How long the delay might be (if any)? Use historical data?
 - Priorities required
 *** reboot, power-on and power-off
-- Booting the board
+- Software reboot
+- Hardware reset
+- Power cycle
 *** get-serial-device
 - Get serial port for the board
 *** More _complex_ verbs
