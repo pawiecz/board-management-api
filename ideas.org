@@ -15,7 +15,7 @@
 - Using different testing stacks in the same physical lab with shared boards
 - Getting to know viewpoints on dividing CI and interactive use
 - Getting to know viewpoints on separate board management layers
-  - board reservation layer
+  - board reservation layer (single for the lab)
   - board control layer
 ** Demotivation
 - Requires exposing access to the board for clients other than executor
@@ -53,7 +53,7 @@
 - Reserving a board
 - Many existing frameworks might expect to be the only client
 - How long the delay might be (if any)? Use historical data?
-- Priorities required, what about interruptions?
+- Priorities and timeouts required, what about interruptions?
 *** reboot, power-on and power-off
 - Software reboot
 - Hardware reset
