@@ -22,14 +22,20 @@
 - Keeping boards at the /initial good state/ might be difficult
 ** API style
 *** Command line shell script
-**** Pros
+**** Pros						     :B_exampleblock:
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
 - Easy to provide (if there is none yet)
 - Avoid recompilation
 - /Common/
-**** Cons
+**** Cons						       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
 - Testing framework internals might not need CLI
 - /Time sensitivity/
-** Board management layer detection
+** Board management layer detection -- board control
 *** /usr/lib/test/test.d
 - lava-board-control,
 - ttc-board-control,
@@ -38,10 +44,11 @@
 - libvirt-board-control,
 - r4d-board-control,
 - etc.
+** Board management layer detection -- configuration
 *** /etc/test.d
 - Communication (if not CLI)
 - Further configuration
-** Single set of APIs (for board management layer communication)
+** Single set of APIs (for board management layers communication) 1/5
 *** list-boards
 - Introspection of the board layer managed objects
 - What about other board features?
@@ -49,26 +56,30 @@
 *** list-features
 - Introspection of the board management layer supported features
 - Extensions: ``x-labgrid-set-gpio''
+** Single set of APIs (for board management layers communication) 2/5
 *** reserve, release (and renew)
 - Reserving a board
 - Many existing frameworks might expect to be the only client
 - How long the delay might be (if any)? Use historical data?
 - Priorities and timeouts required, what about interruptions?
+** Single set of APIs (for board management layers communication) 3/5
 *** reboot, power-on and power-off
 - Software reboot
 - Hardware reset
 - Power cycle
+** Single set of APIs (for board management layers communication) 4/5
 *** get-serial-device
 - Get serial port for the board
+** Single set of APIs (for board management layers communication) 5/5
 *** More _complex_ verbs
 - run, copy_to, copy_from (executing commands, transferring files)
 - install-kernel, install-root-filesystem (provisioning)
 - Should they even be supported on board management level?
 - Probably out-of-current-scope
-*** Synchronous vs asynchronous
-- Which are more common?
-- Which are more convenient?
-** Modularity
+** Miscellaneous
 *** Multiple schedulers
 - Board manager (board reservations)
 - Job/task/test scheduler for actions
+*** Synchronous vs asynchronous
+- Which are more common?
+- Which are more convenient?
